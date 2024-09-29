@@ -1,5 +1,8 @@
 package com.example.demo.exception;
 
+import lombok.Getter;
+
+@Getter
 public class UserException extends RuntimeException {
 
     public UserException(ErrorCode errorCode) {
@@ -7,8 +10,4 @@ public class UserException extends RuntimeException {
         this.errorCode = errorCode;
     }
     private final ErrorCode errorCode;
-
-    public ErrorCode getErrorCode() {
-        return errorCode;
-    }
 }
